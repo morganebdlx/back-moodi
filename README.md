@@ -52,36 +52,34 @@ gem 'devise-jwt'
 
 1. Clone du projet
 bash
-Copier
-Modifier
+
 git clone https://github.com/ton-compte/moodi.git
 cd moodi/backend
+
 2. Installation des dépendances
 bash
-Copier
-Modifier
+
 bundle install
+
 3. Configuration de .env
 Crée un fichier .env :
 
 bash
-Copier
-Modifier
+
 touch .env
 Et ajoute :
 
 ini
-Copier
-Modifier
+
 WEATHER_API_KEY=ta_clé_weatherapi
 FRONTEND_URL=http://localhost:5173
 ⚠️ Ne pas oublier d’ajouter .env à .gitignore.
 
 4. Setup de la base de données
 bash
-Copier
-Modifier
+
 rails db:create db:migrate db:seed
+
 5. Lancement du serveur
 bash
 Copier
@@ -93,8 +91,7 @@ Le backend tourne sur http://localhost:3000
 Dans config/initializers/cors.rb :
 
 ruby
-Copier
-Modifier
+
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     origins ENV.fetch('FRONTEND_URL', 'http://localhost:5173')
@@ -105,5 +102,5 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
   end
 end
 
-👩‍💻 Auteur
+### 👩‍💻 Auteur
 Morgane Bourdillon
