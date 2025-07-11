@@ -40,6 +40,7 @@ gem 'httparty' # pour appeler l'API météo
 gem 'dotenv-rails' # pour charger les variables d'environnement depuis un fichier .env
 gem 'devise' # pour l'authentification des utilisateurs
 gem 'devise-jwt' # pour l'authentification JWT avec Devise
+gem 'ruby-openai' # pour interagir avec l'API OpenAI
 
 
 group :development, :test do

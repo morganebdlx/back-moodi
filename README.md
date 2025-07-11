@@ -82,8 +82,7 @@ rails db:create db:migrate db:seed
 
 5. Lancement du serveur
 bash
-Copier
-Modifier
+
 rails s
 Le backend tourne sur http://localhost:3000
 

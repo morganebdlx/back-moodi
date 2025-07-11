@@ -1,9 +1,21 @@
 Rails.application.routes.draw do
-  devise_for :users
+    devise_for :users
 
   get "/weather", to: "weather#show"
   get "/ping", to: "application#ping"
+
   resources :users, only: [:index, :show, :create, :update, :destroy]
+  post "/recommendations", to: "recommendations#create"
+
+  namespace :api do
+    post '/login', to: 'sessions#create'
+    delete "/logout", to: "sessions#destroy"
+    get '/current_user', to: 'sessions#show'
+
+
+    # Exemple : Ajouter d'autres endpoints d'API ici
+    # get "/user_data", to: "users#data"
+  end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
