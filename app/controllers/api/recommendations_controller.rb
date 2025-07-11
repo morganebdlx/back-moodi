@@ -1,6 +1,6 @@
 class Api::RecommendationsController < ApplicationController
    def create
-    service = AiRecommendationService.new(
+    service = OpenAIService.new(
       user_data: params[:user],
       weather_data: params[:weather]
     )
