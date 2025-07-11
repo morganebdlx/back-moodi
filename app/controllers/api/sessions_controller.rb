@@ -23,8 +23,7 @@ class Api::SessionsController < ApplicationController
   else
     render json: { error: "Pas connecté" }, status: :unauthorized
   end
-
-
+  end
   def destroy
     sign_out(current_user)
     render json: { message: "Déconnexion réussie" }, status: :ok
